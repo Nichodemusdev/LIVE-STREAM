@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Live Stream</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="livestream-container">
+       
+        <div class="webcam-container">
+            <video id="webcam" autoplay></video>
+        </div>
+
+        
+        <div class="viewer-count">🔴 Live • <span id="viewerCount">102</span> viewers</div>
+
+       
+        <div class="video-container">
+            <video id="videoPlayer" controls>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+       
+        <div class="floating-container" id="floatingContainer"></div>
+
+       
+        <div class="controls">
+            <input type="text" id="chatInput" placeholder="Enter a message">
+            <button onclick="sendMessage()">Send</button>
+            <button onclick="sendReaction('❤️')">❤️</button>
+            <button onclick="sendReaction('👍')">👍</button>
+            <button onclick="increaseViewers()">+ Viewers</button>
+            <button onclick="decreaseViewers()">- Viewers</button>
+            <input type="file" id="videoUpload" accept="video/*" onchange="uploadVideo()">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
